@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_animal"
+        android:icon="@drawable/ic_frog_prince"
+        android:title="Живность" />
+
+    <item
+        android:id="@+id/navigation_notifications"
+        android:icon="@drawable/ic_notifications_black_24dp"
+        android:title="Кайросы" />
+
+    <item
+        android:id="@+id/navigation_biggoals"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:title="Test" />
+
+    <item
+        android:id="@+id/navigation_daily"
+        android:icon="@drawable/abc_vector_test"
+        android:title="Время" />
+
+    <item
+        android:id="@+id/navigation_Plan"
+        android:icon="@drawable/abc_vector_test"
+        android:title="План"
+        />
+
+</menu>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardBackgroundColor="@color/design_default_color_surface"
+    android:layout_marginBottom="12dp"
+    android:layout_marginHorizontal="12dp"
+    app:cardElevation="9dp"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/ivType"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/ic_frog_prince"
+            />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12sp"
+            android:textSize="15sp"
+            android:text="Лягушка ещё не выбрана :("
+            android:layout_toRightOf="@id/ivType"
+            android:layout_toEndOf="@id/ivType" />
+
+    </RelativeLayout>
+
+</com.google.android.material.card.MaterialCardView>

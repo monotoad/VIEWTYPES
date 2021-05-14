@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.dashboard.EditAnimalFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/abL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        >
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:title="Статистика"
+            />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?actionBarSize"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/tvDates"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cvFrog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                app:cardElevation="5dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvDates">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp">
+
+                    <ImageView
+                        android:id="@+id/ivFrog"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/ic_frog_prince"
+                        android:layout_centerHorizontal="true"
+                        />
+
+                    <TextView
+                        android:id="@+id/tvFrog"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/ivFrog"
+                        android:layout_centerHorizontal="true"
+                        android:text="Сделано: 0/1"
+                        />
+                </RelativeLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cvSteak"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                app:cardElevation="5dp"
+                app:layout_constraintEnd_toStartOf="@+id/cvPlan"
+                app:layout_constraintStart_toEndOf="@+id/cvFrog"
+                app:layout_constraintTop_toBottomOf="@id/tvDates">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp">
+
+                    <ImageView
+                        android:id="@+id/ivSteak"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/ic_steak" />
+
+                    <TextView
+                        android:id="@+id/tvSteak"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/ivSteak"
+                        android:layout_centerHorizontal="true"
+                        android:text="Сделано: 0/1" />
+                </RelativeLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cvPlan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                app:cardElevation="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvDates">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp">
+
+                    <ImageView
+                        android:id="@+id/ivPlan"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/ic_requirement" />
+
+                    <TextView
+                        android:id="@+id/tvPlan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/ivPlan"
+                        android:layout_centerHorizontal="true"
+                        android:text="Сделано: 0/1" />
+                </RelativeLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+
+
+            <ScrollView
+                android:id="@+id/activity_scrollView1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:scrollbars="horizontal|vertical"
+                android:scrollbarStyle="outsideInset"
+                android:fillViewport="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cvSteak"
+                android:layout_margin="15dp"
+                >
+                <HorizontalScrollView
+                    android:id="@+id/activity_horizontalView1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:scrollbars="horizontal|vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        >
+                        <TableLayout
+                            android:id="@+id/tlStat"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:isScrollContainer="true"
+
+                            >
+
+                            <TableRow
+                                >
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Название"
+                                    android:textStyle="bold"
+                                    android:background="@color/black"
+                                    android:textColor="@color/white"
+                                    android:gravity="center"
+
+                                    />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="ПН"
+                                    android:gravity="center"
+                                    android:layout_weight="1"
+                                    />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="ПН"
+                                    android:gravity="center"
+                                    android:layout_weight="1"
+                                    /><TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="ПН"
+                                android:gravity="center"
+                                android:layout_weight="1"
+                                />
+
+
+
+                            </TableRow>
+
+                            <TableRow
+                                >
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Нsdadasdазвdasdание"
+                                    android:textStyle="bold"
+                                    android:gravity="center"
+
+                                    />
+
+
+                            </TableRow>
+
+
+                        </TableLayout>
+
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+            </ScrollView>
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/barChart"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_margin="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/activity_scrollView1"
+                />
+
+            <TextView
+                android:id="@+id/tvAll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Общий прогресс по выполнению"
+                android:layout_margin="15dp"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/barChart" />
+
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/allDTChart"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_margin="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvAll"
+                />
+
+
+            <TextView
+                android:id="@+id/tvHard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Прогресс по выполнению жёстких задач"
+                android:layout_margin="15dp"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/allDTChart" />
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/hardDTChart"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_margin="15dp"
+                app:layout_constraintTop_toBottomOf="@+id/tvHard"
+                />
+
+            <TextView
+                android:id="@+id/tvBudget"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Прогресс по выполнению бюджетируемых задач"
+                android:layout_margin="15dp"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/hardDTChart" />
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/budgetDTChart"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_margin="15dp"
+                app:layout_constraintTop_toBottomOf="@+id/tvBudget"
+                />
+
+            <TextView
+                android:id="@+id/tvSoft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Прогресс по выполнению гибких задач"
+                android:layout_margin="15dp"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/budgetDTChart" />
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/softDTChart"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_margin="15dp"
+                app:layout_constraintTop_toBottomOf="@+id/tvSoft"
+                />
+
+            <TextView
+                android:id="@+id/tvKairoses"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Прогресс по выполнению кайросовых событий"
+                android:layout_margin="15dp"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/softDTChart" />
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/chartKairoses"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:layout_constraintTop_toBottomOf="@id/tvKairoses"
+                />
+
+
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

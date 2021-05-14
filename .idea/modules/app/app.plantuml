@@ -1,0 +1,318 @@
+@startuml
+
+title __VIEWTYPES.APP's Class Diagram__\n
+
+  namespace com.example.viewtypes {
+    abstract class com.example.viewtypes.AppDatabase {
+    }
+  }
+  
+
+  namespace com.example.viewtypes {
+    class com.example.viewtypes.AppDatabase_Impl {
+    }
+  }
+  
+
+  namespace com.example.viewtypes {
+    class com.example.viewtypes.BottomDialogFragment {
+    }
+  }
+  
+
+  namespace com.example.viewtypes {
+    class com.example.viewtypes.BuildConfig {
+    }
+  }
+  
+
+  namespace com.example.viewtypes {
+    class com.example.viewtypes.Constants {
+    }
+  }
+  
+
+  namespace com.example.viewtypes {
+    class com.example.viewtypes.Date {
+    }
+  }
+  
+
+  namespace com.example.viewtypes {
+    class com.example.viewtypes.Elephant {
+    }
+  }
+  
+
+  namespace com.example.viewtypes {
+    class com.example.viewtypes.ElephantWithSteaks {
+    }
+  }
+  
+
+  namespace com.example.viewtypes {
+    class com.example.viewtypes.Event {
+    }
+  }
+  
+
+  namespace com.example.viewtypes {
+    class com.example.viewtypes.EventAdapter {
+    }
+  }
+  
+
+  namespace com.example.viewtypes {
+    abstract class com.example.viewtypes.EventDao {
+    }
+  }
+  
+
+  namespace com.example.viewtypes {
+    class com.example.viewtypes.EventDao_Impl {
+    }
+  }
+  
+
+  namespace com.example.viewtypes {
+    class com.example.viewtypes.EventDiffCallback {
+    }
+  }
+  
+
+  namespace com.example.viewtypes {
+    class com.example.viewtypes.EventRepository {
+    }
+  }
+  
+
+  namespace com.example.viewtypes {
+    class com.example.viewtypes.EventViewModel {
+    }
+  }
+  
+
+  namespace com.example.viewtypes {
+    class com.example.viewtypes.EventsWithKairos {
+    }
+  }
+  
+
+  namespace com.example.viewtypes {
+    class com.example.viewtypes.Frog {
+    }
+  }
+  
+
+  namespace com.example.viewtypes {
+    class com.example.viewtypes.FrogAndDate {
+    }
+  }
+  
+
+  namespace com.example.viewtypes {
+    class com.example.viewtypes.Item {
+    }
+  }
+  
+
+  namespace com.example.viewtypes {
+    class com.example.viewtypes.Kairos {
+    }
+  }
+  
+
+  namespace com.example.viewtypes {
+    class com.example.viewtypes.KairosEventCrossRef {
+    }
+  }
+  
+
+  namespace com.example.viewtypes {
+    class com.example.viewtypes.KairosWithEvents {
+    }
+  }
+  
+
+  namespace com.example.viewtypes {
+    class com.example.viewtypes.MainActivity {
+    }
+  }
+  
+
+  namespace com.example.viewtypes {
+    class com.example.viewtypes.Steak {
+    }
+  }
+  
+
+  namespace com.example.viewtypes {
+    class com.example.viewtypes.SubAdapter {
+    }
+  }
+  
+
+  namespace com.example.viewtypes {
+    namespace ui {
+      interface com.example.viewtypes.ui.RecyclerViewClickInterface {
+      }
+    }
+  }
+  
+
+  namespace com.example.viewtypes {
+    namespace ui {
+      namespace dashboard {
+        class com.example.viewtypes.ui.dashboard.DashboardFragment {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.example.viewtypes {
+    namespace ui {
+      namespace dashboard {
+        class com.example.viewtypes.ui.dashboard.DashboardFragmentArgs {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.example.viewtypes {
+    namespace ui {
+      namespace dashboard {
+        class com.example.viewtypes.ui.dashboard.DashboardFragmentDirections {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.example.viewtypes {
+    namespace ui {
+      namespace dashboard {
+        class com.example.viewtypes.ui.dashboard.DashboardViewModel {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.example.viewtypes {
+    namespace ui {
+      namespace home {
+        class com.example.viewtypes.ui.home.HomeFragment {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.example.viewtypes {
+    namespace ui {
+      namespace home {
+        class com.example.viewtypes.ui.home.HomeFragmentArgs {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.example.viewtypes {
+    namespace ui {
+      namespace home {
+        class com.example.viewtypes.ui.home.HomeFragmentDirections {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.example.viewtypes {
+    namespace ui {
+      namespace home {
+        class com.example.viewtypes.ui.home.HomeViewModel {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.example.viewtypes {
+    namespace ui {
+      namespace notifications {
+        class com.example.viewtypes.ui.notifications.NotificationsFragment {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.example.viewtypes {
+    namespace ui {
+      namespace notifications {
+        class com.example.viewtypes.ui.notifications.NotificationsFragmentDirections {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.example.viewtypes {
+    namespace ui {
+      namespace notifications {
+        class com.example.viewtypes.ui.notifications.NotificationsViewModel {
+        }
+      }
+    }
+  }
+  
+
+  com.example.viewtypes.AppDatabase -up-|> androidx.room.RoomDatabase
+  com.example.viewtypes.AppDatabase_Impl -up-|> com.example.viewtypes.AppDatabase
+  com.example.viewtypes.AppDatabase_Impl o-- com.example.viewtypes.EventDao : _eventDao
+  com.example.viewtypes.BottomDialogFragment -up-|> com.google.android.material.bottomsheet.BottomSheetDialogFragment
+  com.example.viewtypes.Elephant .up.|> android.os.Parcelable
+  com.example.viewtypes.Elephant -up-|> com.example.viewtypes.Frog
+  com.example.viewtypes.ElephantWithSteaks .up.|> android.os.Parcelable
+  com.example.viewtypes.ElephantWithSteaks o-- com.example.viewtypes.Elephant : elephant
+  com.example.viewtypes.EventAdapter -up-|> androidx.recyclerview.widget.RecyclerView.Adapter
+  com.example.viewtypes.EventDao_Impl -up-|> com.example.viewtypes.EventDao
+  com.example.viewtypes.EventDiffCallback -up-|> androidx.recyclerview.widget.DiffUtil.Callback
+  com.example.viewtypes.EventRepository o-- com.example.viewtypes.EventDao : eventDao
+  com.example.viewtypes.EventViewModel -up-|> androidx.lifecycle.AndroidViewModel
+  com.example.viewtypes.EventViewModel o-- com.example.viewtypes.EventRepository : eventRepository
+  com.example.viewtypes.EventsWithKairos o-- com.example.viewtypes.Event : event
+  com.example.viewtypes.Frog .up.|> android.os.Parcelable
+  com.example.viewtypes.FrogAndDate o-- com.example.viewtypes.Date : date
+  com.example.viewtypes.FrogAndDate o-- com.example.viewtypes.Frog : frog
+  com.example.viewtypes.Item .up.|> android.os.Parcelable
+  com.example.viewtypes.KairosWithEvents o-- com.example.viewtypes.Kairos : kairos
+  com.example.viewtypes.MainActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.viewtypes.Steak .up.|> android.os.Parcelable
+  com.example.viewtypes.Steak -up-|> com.example.viewtypes.Frog
+  com.example.viewtypes.SubAdapter -up-|> androidx.recyclerview.widget.RecyclerView.Adapter
+  com.example.viewtypes.ui.dashboard.DashboardFragment -up-|> androidx.fragment.app.Fragment
+  com.example.viewtypes.ui.dashboard.DashboardFragment o-- com.example.viewtypes.ui.dashboard.DashboardFragmentArgs : args
+  com.example.viewtypes.ui.dashboard.DashboardFragment o-- com.example.viewtypes.ui.dashboard.DashboardViewModel : dashboardViewModel
+  com.example.viewtypes.ui.dashboard.DashboardFragmentArgs .up.|> androidx.navigation.NavArgs
+  com.example.viewtypes.ui.dashboard.DashboardViewModel -up-|> androidx.lifecycle.ViewModel
+  com.example.viewtypes.ui.home.HomeFragment -up-|> androidx.fragment.app.Fragment
+  com.example.viewtypes.ui.home.HomeFragment o-- com.example.viewtypes.ui.home.HomeViewModel : homeViewModel
+  com.example.viewtypes.ui.home.HomeFragmentArgs .up.|> androidx.navigation.NavArgs
+  com.example.viewtypes.ui.home.HomeViewModel -up-|> androidx.lifecycle.ViewModel
+  com.example.viewtypes.ui.notifications.NotificationsFragment -up-|> androidx.fragment.app.Fragment
+  com.example.viewtypes.ui.notifications.NotificationsFragment o-- com.example.viewtypes.ui.notifications.NotificationsViewModel : notificationsViewModel
+  com.example.viewtypes.ui.notifications.NotificationsViewModel -up-|> androidx.lifecycle.ViewModel
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

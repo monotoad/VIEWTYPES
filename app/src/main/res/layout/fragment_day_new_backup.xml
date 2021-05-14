@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey"
+    tools:context=".ui.home.AnimalFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        >
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:title="План"
+            app:menu="@menu/animal_bar"
+            />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?actionBarSize"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:orientation="vertical">
+
+               <TextView
+                   android:layout_height="wrap_content"
+                   android:layout_width="match_parent"
+                   android:padding="12sp"
+                   android:textSize="18sp"
+                   android:textColor="@color/black"
+                   android:textStyle=""
+                   android:text="Лягушка дня"
+                   />
+
+               <com.example.viewtypes.ExRecyclerView
+                   android:id="@+id/rvFrogs"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layoutAnimation="@anim/layout_animation"
+                   />
+
+              <include
+                  android:id="@+id/empty_frog_rv"
+                  layout="@layout/empty_frog_rv"
+                  />
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:padding="12sp"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:textStyle=""
+                android:text="Стейки дня"
+                />
+
+            <com.example.viewtypes.ExRecyclerView
+                android:id="@+id/rvSteaks"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layoutAnimation="@anim/layout_animation"
+                />
+
+            <include
+                android:id="@+id/empty_steak_rv"
+                layout="@layout/empty_steak_rv"
+                />
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:padding="12sp"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:textStyle=""
+                android:text="План"
+                />
+
+            <com.example.viewtypes.ExRecyclerView
+                android:id="@+id/rvPlan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layoutAnimation="@anim/layout_animation"
+                />
+
+
+
+        </LinearLayout>
+
+
+
+
+
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnNewEvent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:backgroundTint="@color/teal_200"
+        android:src="@drawable/ic_baseline_add_24"
+        app:tint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:elevation="16dp"
+        android:translationZ="12dp"
+        />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnAddFrog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:elevation="16dp"
+        android:src="@drawable/ic_frog_prince"
+        app:tint="#FFFFFF"
+        android:translationZ="12dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/btnNewAnimalEvent"
+        app:layout_constraintEnd_toEndOf="@+id/btnNewAnimalEvent"
+        />
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnAddElephant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:elevation="16dp"
+        android:src="@drawable/ic_elephant"
+        app:tint="#FFFFFF"
+        android:translationZ="12dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/btnAddFrog"
+        app:layout_constraintEnd_toEndOf="@+id/btnAddFrog"
+        />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

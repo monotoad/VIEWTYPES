@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nested"
+    app:startDestination="@id/testFragment">
+
+    <argument
+        android:name="item_id"
+        app:argType="string"
+        app:nullable="true"
+        android:defaultValue="@null"
+        />
+
+    <fragment
+        android:id="@+id/testFragment"
+        android:name="com.example.viewtypes.TestFragment"
+        android:label="fragment_test"
+        tools:layout="@layout/fragment_test">
+
+        <argument
+            android:name="item_id"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="@null"
+            />
+
+    </fragment>
+    <fragment
+        android:id="@+id/testFragment2"
+        android:name="com.example.viewtypes.TestFragment2"
+        android:label="fragment_test2"
+        tools:layout="@layout/fragment_test2" />
+    <fragment
+        android:id="@+id/testFragment3"
+        android:name="com.example.viewtypes.TestFragment3"
+        android:label="TestFragment3"
+        tools:layout="@layout/fragment_test3"
+        />
+</navigation>
